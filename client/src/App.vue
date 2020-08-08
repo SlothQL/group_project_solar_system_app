@@ -64,7 +64,7 @@ export default {
 
     body {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        transform: scale(1, 1.1);
+        /*transform: scale(1, 1.1); apply to all text*/
     }
 
 </style>
