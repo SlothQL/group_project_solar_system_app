@@ -58,5 +58,13 @@ export default {
 </script>
 
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        transform: scale(1, 1.1);
+    }
 
 </style>
