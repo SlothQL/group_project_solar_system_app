@@ -1,7 +1,7 @@
 <template>
 <div class="heading-wrap">
         <div>
-  <b-navbar toggleable="lg" type="light" variant="light">
+  <b-navbar toggleable="lg" type="light" class="main-nav" variant="light">
     <b-navbar-brand href="#" class="brand">
         <img src="../assests/nav-logo.jpg" class="logo" alt="">
     </b-navbar-brand>
@@ -11,6 +11,7 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item href="#">Quiz</b-nav-item>
+        <b-nav-item href="#">Leaderboard</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -117,6 +118,9 @@
 </script>
 
 <style>
+.main-nav {
+    height: 50px;
+}
 .logo {
     width: 20%;
 
