@@ -1,7 +1,7 @@
 <template>
   <div class="wrap-app">
-        <!-- <header></header>
-        <div class="list-all-planets">
+        <heading></heading>
+        <!-- <div class="list-all-planets">
             <planet-list :planets='planets'></planet-list>
         </div>
         <div>
@@ -12,7 +12,7 @@
 
 <script>
 //import { eventBus } from './main.js';
-//import Header from './components/Header.vue';
+import Header from '@/components/Header.vue';
 //import PlanetList from './components/PlanetList.vue';
 //import PlanetDetail from './components/PlanetDetail.vue';
 export default {
@@ -25,11 +25,11 @@ export default {
             allData: []
         }
     },
-    /*components: {
-        'planet-list': PlanetList,
-        'planet-detail': PlanetDetail,
-        'header': Header
-    },*/
+    components: {
+        // 'planet-list': PlanetList,
+        // 'planet-detail': PlanetDetail,
+        'heading': Header
+    },
     mounted() {
         fetch('https://api.le-systeme-solaire.net/rest/bodies/')
             .then(res => res.json())
