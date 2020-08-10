@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="center">
       <h1>Test your Knowledge</h1>
         <form>
             <label for="name">Name</label>
@@ -47,5 +47,11 @@ export default {
 </script>
 
 <style>
-
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+  text-align: center;
+}
 </style>

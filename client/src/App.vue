@@ -7,7 +7,7 @@
         <div v-if="selectedPlanet">
             <planet-detail :planet='selectedPlanet' :moons='moons'></planet-detail> 
         </div>
-        <div class="quiz-button">  
+        <div class="quiz-button center">  
             <button @click="handleClick">Test your knowledge</button>
         </div>
         <div :class="quizState">
@@ -90,5 +90,13 @@ export default {
 
     .show {
     
+    }
+
+    .center {
+        margin: auto;
+        width: 50%;
+        border: 3px solid black;
+        padding: 10px;
+        text-align: center;
     }
 </style>
