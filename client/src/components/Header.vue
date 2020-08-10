@@ -1,13 +1,76 @@
 <template>
-  
+   <div class="heading-wrap">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a class="navbar-brand" href="#">
+         <img src="../assets/nav-logo-header.jpg" class="d-inline-block align-top logo" alt="">
+        Solar System
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+               <a class="nav-item nav-link" href="#">Quiz</a>
+               <a class="nav-item nav-link" href="#">Leaderboard</a>
+            </div>
+         </div>
+      </nav>
+      <div class="carousel-container">
+         <b-carousel
+            id="carousel-1"
+            :interval="4000"
+            controls
+            indicators
+            background="#ababab"
+            img-width="1024"
+            img-height="480"
+            style="text-shadow: 1px 1px 2px #333;"
+            
+            >
+            <!-- Text slides with image -->
+            <b-carousel-slide
+               caption="SOLARFACT #1"
+               text="194 moons, 3,583 comets and 796,289 asteroids have been found in the solar system."
+               img-src="../assets/carousel_images/solar-systemandroid-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-vjudo-2000x1451 (2).jpg"
+               ></b-carousel-slide>
+            <!-- Slides with custom text -->
+            <b-carousel-slide 
+               caption="SOLARFACT #2"
+               text="99.86% of the solar system’s mass is found in the Sun. The majority of the remaining 0.14% is contained within the eight planets."
+               img-src="../assets/carousel_images/cropped-1024-480-957439.jpg">
+            </b-carousel-slide>
+            <!-- Slides with image only -->
+            <b-carousel-slide 
+                caption="SOLARFACT #3"
+                text="The Solar System formed around 4.6 billion years ago."
+                img-src="../assets/carousel_images/nasa-yZygONrUBe8-unsplash.jpg"></b-carousel-slide>
+            <!-- Slides with img slot -->
+            <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+            <b-carousel-slide 
+                caption="SOLARFACT #4"
+                text="As of 2008, there are also five dwarf planets: Pluto, Ceres, Eris, Makemake & Haumea."
+                img-src="../assets/carousel_images/solar-system-model.jpg"></b-carousel-slide>
+            <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+            <b-carousel-slide 
+                caption="SOLARFACT #5" 
+                text="The two innermost gas giants, Jupiter and Saturn, are the largest of the four outer planets and are composed mainly of hydrogen and helium."
+                img-src="../assets/carousel_images/cropped-1024-480-732192.jpg" 
+                img-alt="">
+            </b-carousel-slide>
+         </b-carousel>
+      </div>
+   </div>
 </template>
 
 <script>
-export default {
+  export default {
+    name: "heading",  
 
-}
+  }
 </script>
 
 <style>
-
+.carousel-container {
+    margin-top: 0.5rem;
+}
 </style>
