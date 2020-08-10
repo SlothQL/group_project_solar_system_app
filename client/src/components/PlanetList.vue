@@ -2,7 +2,7 @@
     <div id="planets-list">
         <h1>Planets in our Solar System</h1>
         <ul>
-            <planet-item v-for="(planet, index) in planets" :planet="planet" :key="index"/>
+            <planet-item v-for="(planet, index) in planets" :planet="planet" :detailState="detailState" :key="index"/>
         </ul>
     </div>
 </template>
@@ -13,7 +13,7 @@ import PlanetItem from "./PlanetItem.vue";
 export default {
     name: "PlanetList",
 
-    props: ["planets"],
+    props: ['planets', 'detailState'],
     
 
     components: {

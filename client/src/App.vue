@@ -67,6 +67,7 @@ export default {
         },
         handleClick() {
             this.quizState = "show";
+            this.detailState = "hide"
         }
     }
 }

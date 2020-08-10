@@ -14,11 +14,13 @@ import { eventBus } from "@/main.js";
 export default {
     name: "PlanetItem",
 
-    props: ["planet"],
+    props: ['planet', 'detailState'],
     
     methods: {
     handleClick() {
       eventBus.$emit("selected-planet", this.planet);
+      this.detailState = "show";
+
     },
     }
 }
