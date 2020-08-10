@@ -28,7 +28,6 @@ export default {
 .img {
     height: 160px;
     width: 200px;
-    /* margin-right: 30px; */
     text-align: center;
     }
 
