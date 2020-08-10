@@ -22,3 +22,17 @@ export default {
 
 }
 </script>
+
+<style scoped>
+
+#planets-list {
+    background-color: black;
+}
+
+ul {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+</style>
