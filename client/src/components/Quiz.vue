@@ -6,7 +6,11 @@
 
 <script>
 export default {
+    name: "quiz", 
 
+    mounted() {
+        fetch('')
+    }
 }
 </script>
 
