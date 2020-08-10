@@ -1,11 +1,15 @@
 <template>
   <div>
-      <h1>Quiz</h1>
+      <h1>Test your Knowledge</h1>
+        <ol>
+            <quiz-item v-for="(question, index) in randomQuestions" :question="question" :key="index"/>
+        </ol>
   </div>
 </template>
 
 <script>
-import PlanetService from "../services/PlanetService.js"
+import PlanetService from "../services/PlanetService.js";
+import QuizItem from "./QuizItem.vue";
 export default {
     data() {
         return {
@@ -31,6 +35,9 @@ export default {
                 };
             }
         }
+    },
+    components: {
+        'quiz-item': QuizItem
     }
 
 }

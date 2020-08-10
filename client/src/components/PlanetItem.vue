@@ -30,4 +30,4 @@ export default {
         height: 100px;
         width: 120px;
     }
-</style>
+</style>m
