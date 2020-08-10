@@ -4,7 +4,7 @@
         <div class="list-all-planets">
             <planet-list :planets='planets'></planet-list>
         </div>
-        <div>
+        <div v-if="selectedPlanet">
             <planet-detail :planet='selectedPlanet' :moons='moons'></planet-detail> 
         </div>
   </div>

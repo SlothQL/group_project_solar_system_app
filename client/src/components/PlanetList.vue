@@ -9,8 +9,6 @@
 
 <script>
 import PlanetItem from "./PlanetItem.vue";
-import { eventBus } from "@/main.js";
-
 
 export default {
     name: "PlanetList",
