@@ -5,8 +5,8 @@ db.dropDatabase();
 db.questions.insertMany([
     {
         question: "An Astronomical Unit is the average distance between which two objects in our solar system?",
-        options: ["The Earth and the Moon", "The Earth and the Sun", "The Sun and the Moon", "The Sun and Mars"],
-        correctAnswer: "The Earth and the Sun"
+        options: ["Earth and the Moon", "Earth and the Sun", "The Sun and the Moon", "The Sun and Mars"],
+        correctAnswer: "Earth and the Sun"
     },
     {
         question: "Ganymede, the largest moon in our solar system, belongs to which planet?",
@@ -15,7 +15,7 @@ db.questions.insertMany([
     },
     {
         question: "In our solar system, which planet has the shortest day?",
-        options: ["Jupiter", "Venus", "Mars", "The Earth"],
+        options: ["Jupiter", "Venus", "Mars", "Earth"],
         correctAnswer: "Jupiter"
     },
     {
@@ -41,7 +41,7 @@ db.questions.insertMany([
     {
         question: "Which planet in our solar system has the most oxygen?",
         options: ["Mars", "Earth", "Mercury", "Venus"],
-        correctAnswer: "The Earth"
+        correctAnswer: "Earth"
     },
     {
         question: "How many planets in our solar system have moons?",
@@ -60,7 +60,7 @@ db.questions.insertMany([
     },
     {
         question: "Callisto is the name of a moon orbiting what planet in our solar system?",
-        options: ["Neptune", "Mars", "Jupiter", "Saturn"],
+        options: ["Saturn", "Mars", "Jupiter", "Neptune"],
         correctAnswer: "Jupiter"
     },
     {
@@ -75,27 +75,91 @@ db.questions.insertMany([
     },
     {
         question: "Which planet has the most moons?",
-        options: ["Neptune", "Mars", "Jupiter", "Saturn"],
+        options: ["Jupiter", "Uranus", "Saturn", "Earth"],
         correctAnswer: "Jupiter"
+    },
+    {
+        question: "Our solar system is located in what galaxy?",
+        options: ["Andromeda Galaxy", "The Milky Way Galaxy"],
+        correctAnswer: "The Milky Way Galaxy"
+    },
+    {
+        question: "Which planet in our solar system spins the fastest?",
+        options: ["Earth", "Mars", "Jupiter", "Venus"],
+        correctAnswer: "Jupiter. It rotates once on average in just under 10 hours."
+    },
+    {
+        question: "What planet in our solar system has the longest day?",
+        options: ["Earth", "Mercury", "Saturn", "Venus"],
+        correctAnswer: "Venus (243 Earth days)"
+    },
+    {
+        question: "In our solar system which two planets rotate clockwise?",
+        options: ["Venus and Uranus", "Uranus and Mercury", "Mercury and Mars", "Venus and Mars"],
+        correctAnswer: "Venus and Uranus"
+    },
+    {
+        question: "What planet is closest to the Sun?",
+        options: ["Venus", "Earth", "Mars", "Mercury"],
+        correctAnswer: "Mercury"
+    },
+    {
+        question: "What is the largest planet in our solar system?",
+        options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
+        correctAnswer: "Jupiter"
+    },
+    {
+        question: "How many moons does the planet Venus have?",
+        options: ["One", "Two", "Zero", "Five"],
+        correctAnswer: "Zero"
+    },
+    {
+        question: "What former planet was demoted to a dwarf planet in 2006?",
+        options: ["Eris", "Pluto", "Ceres", "Haumea"],
+        correctAnswer: "Pluto"
     }
 ]);
 
 
 db.leaderboard.insertMany([
     {
-        name: "Alina Linden",
-        score: 18
+        name: "Alina",
+        score: 3
     },
     {
         name: "Jane O'Donnell",
-        score: 15
+        score: 7
     },
     {
         name: "James Monks",
-        score: 17
+        score: 8
     },
     {
         name: "Ruben Botha",
-        score: 16
+        score: 4
+    },
+    {
+        name: "Stephen Herd",
+        score: 4
+    },
+    {
+        name: "Tomek",
+        score: 5
+    },
+    {
+        name: "Rebeka Geczi",
+        score: 9
+    },
+    {
+        name: "Juan",
+        score: 1
+    },
+    {
+        name: "Sky Su",
+        score: 10
+    },
+    {
+        name: "James C.",
+        score: 2
     }
 ]);
