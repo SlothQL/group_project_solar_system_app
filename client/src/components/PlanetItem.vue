@@ -26,9 +26,20 @@ export default {
 
 <style scoped>
    img {
-        height: 100px;
-        width: 120px;
+    height: 160px;
+    width: 200px;
+    margin-right: 30px;
     }
 
+.planet-name {
+    color: white;
+    text-align: center;
+    list-style: none;
+}
+
+.img-list:hover {
+    cursor: pointer;
+    background-color: gray;
+}
 
 </style>
