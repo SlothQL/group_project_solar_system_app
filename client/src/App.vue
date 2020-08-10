@@ -1,19 +1,19 @@
 <template>
-  <div class="wrap-app">
-        <heading></heading>
-        <div class="list-all-planets">
-            <planet-list :planets='planets'></planet-list>
-        </div>
-        <div v-if="selectedPlanet">
-            <planet-detail :planet='selectedPlanet' :moons='moons'></planet-detail> 
-        </div>
-        <div class="quiz-button center-button">  
-            <button @click="handleClick">Test your knowledge</button>
-        </div>
-        <div :class="quizState">
-            <quiz></quiz>
-        </div>
-  </div>
+   <div class="wrap-app">
+      <heading></heading>
+      <div class="list-all-planets">
+         <planet-list :planets='planets'></planet-list>
+      </div>
+      <div v-if="selectedPlanet">
+         <planet-detail :planet='selectedPlanet' :moons='moons'></planet-detail>
+      </div>
+      <div class="quiz-button center-button">  
+         <button @click="handleClick">Test your knowledge</button>
+      </div>
+      <div :class="quizState">
+         <quiz></quiz>
+      </div>
+   </div>
 </template>
 
 <script>
@@ -95,7 +95,6 @@ export default {
     .center-button {
         margin: auto;
         width: 50%;
-        border: 3px solid black;
         padding: 10px;
         text-align: center;
     }
