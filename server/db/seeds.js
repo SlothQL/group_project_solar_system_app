@@ -123,19 +123,43 @@ db.questions.insertMany([
 
 db.leaderboard.insertMany([
     {
-        name: "Alina Linden",
-        score: 18
+        name: "Alina",
+        score: 3
     },
     {
         name: "Jane O'Donnell",
-        score: 15
+        score: 7
     },
     {
         name: "James Monks",
-        score: 17
+        score: 8
     },
     {
         name: "Ruben Botha",
-        score: 16
+        score: 4
+    },
+    {
+        name: "Stephen Herd",
+        score: 4
+    },
+    {
+        name: "Tomek",
+        score: 5
+    },
+    {
+        name: "Rebeka Geczi",
+        score: 9
+    },
+    {
+        name: "Juan",
+        score: 1
+    },
+    {
+        name: "Sky Su",
+        score: 10
+    },
+    {
+        name: "James C.",
+        score: 2
     }
 ]);
