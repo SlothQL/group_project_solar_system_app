@@ -80,6 +80,10 @@ export default {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+    p, h1, h2, h3 {
+        transform: scale(1, 1.1);
+    }
+
     .hide {
         display: none;
     }
