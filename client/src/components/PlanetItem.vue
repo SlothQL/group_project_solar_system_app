@@ -17,10 +17,10 @@ export default {
     props: ['planet', 'detailState'],
     
     methods: {
-    handleClick() {
-      eventBus.$emit("selected-planet", this.planet);
-      eventBus.$emit("detail-state", "show");
-    },
+      handleClick() {
+        eventBus.$emit("selected-planet", this.planet);
+        eventBus.$emit("detail-state", "show");
+      }
     }
 }
 
