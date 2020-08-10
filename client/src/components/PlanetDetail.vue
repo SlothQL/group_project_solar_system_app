@@ -43,12 +43,24 @@
                 <li>{{ planet.englishName}} spins lying on its side, unlike Earth and the other planets!</li>
                 <li>It shows off a majestic blue/green haze due to its high levels of methane gas.</li>
             </ul>
+            <div class="sound">
+                <p>Press Play To Hear The Sounds of Uranus.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/uranus_sound.mp3" type="audio/mp3" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === 'Pluto'">
             <ul>
                 <li>It is the smallest and furtherst planet from the sun - and is now known as a Dwarf Planet.</li>
                 <li>Because it is so far away from the sun it is very cold with temperatures ranging from -235 Degrees Celsius to -210 Degrees Celsius - now that's cold!</li>
             </ul>
+            <div class="sound">
+                <p>Press Play To Hear The Sounds of Pluto.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/pluto_sound.mp3" type="audio/mp3" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === 'Neptune'">
             <ul>
@@ -74,6 +86,12 @@
                 <li>It has no atmosphere which means there is no wind or weather.</li>
                 <li>it is so close to the sun that the daytime temperature on Mercury is scorching - reaching over 400 Degrees Celsius.</li>
             </ul>
+            <div class="sound">
+                <p>Press Play To Hear The Sounds of Mercury.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/mercury_sound.mp3" type="audio/mp3" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === 'Venus'">
             <ul>
