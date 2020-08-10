@@ -14,7 +14,7 @@
 //import { eventBus } from './main.js';
 //import Header from './components/Header.vue';
 //import PlanetList from './components/PlanetList.vue';
-// import PlanetDetail from './components/PlanetDetail.vue';
+import PlanetDetail from './components/PlanetDetail.vue';
 export default {
     name: 'app',
     data() {

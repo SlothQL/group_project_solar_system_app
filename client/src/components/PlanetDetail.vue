@@ -7,8 +7,8 @@
         <p>Distance From Sun: {{ planet.perihelion }} km</p>
         <p>Gravity: {{ planet.gravity }} m/s 2</p>
         <p>It has {{ planet.moons.length }} moons. </p>
-            <label for="moonList">Select A Moon</label>
-            <select id="moon" @change="goToMoon" v-model="selectedMoon">
+            <label for="moonList">All Moons</label>
+            <select id="moonList">
                 <option v-for="(moon, index) in planet.moons" :key="index" :moon="moon"> {{ moon.moon}} </option>
             </select>
         <p>It takes {{ planet.sideralOrbit }} days to fully orbit the sun - wow! </p>
@@ -75,6 +75,11 @@
 
 export default {
     name: "planet-detail",
+    data() {
+        return{
+            selectedMoon: ""
+        };
+    },
     props: ["planet"],
 
     methods: {
