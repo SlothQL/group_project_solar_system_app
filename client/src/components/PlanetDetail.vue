@@ -50,7 +50,7 @@
                 <li>It is known as a gas giant, and has many extreme atmospeheric conditions - storm winds race around the atmosphere! </li>
             </ul>
             <audio controls>
-                <source src="@/assets/saturn_sound.mp3" type="audio/mp3" id="track"/>
+                <source src="@/assets/planet_sounds/saturn_sound.mp3" type="audio/mp3" id="track"/>
             </audio>
             <!-- <button class="sound" @click.prevent="playSound('@/assets/saturn_sound.mp3')">Play Planet sound
             </button> -->
