@@ -55,6 +55,15 @@ export default {
             eventBus.$on('selected-planet', (planet) => {
                 this.selectedPlanet = planet;
             })
+
+            eventBus.$on('detail-state', (state) => {
+                if (this.quizState === "show") {
+                    if (window.confirm("This would end the quiz. Are you sure you want to leave?")) {
+                    this.detailState = state;
+                    this.quizState = "hide";
+                    }
+                }
+            })
     },
     methods: {
         getPlanets() {

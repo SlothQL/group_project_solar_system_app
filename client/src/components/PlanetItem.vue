@@ -19,8 +19,7 @@ export default {
     methods: {
     handleClick() {
       eventBus.$emit("selected-planet", this.planet);
-      this.detailState = "show";
-
+      eventBus.$emit("detail-state", "show");
     },
     }
 }
