@@ -7,6 +7,12 @@
         <div v-if="selectedPlanet">
             <planet-detail :planet='selectedPlanet' :moons='moons'></planet-detail> 
         </div>
+        <div class="quiz-button">  
+            <button @click="handleClick">Test your knowledge</button>
+        </div>
+        <div :class="quizState">
+            <quiz></quiz>
+        </div>
   </div>
 </template>
 
@@ -15,6 +21,7 @@ import { eventBus } from './main.js';
 import Header from './components/Header.vue';
 import PlanetList from './components/PlanetList.vue';
 import PlanetDetail from './components/PlanetDetail.vue';
+import Quiz from './components/Quiz.vue';
 
 export default {
     name: 'app',
@@ -23,13 +30,15 @@ export default {
             planets: [],
             moons: [],
             selectedPlanet: null,
-            allData: []
+            allData: [],
+            quizState: "hide"
         }
     },
     components: {
         'planet-list': PlanetList,
         'planet-detail': PlanetDetail,
-        'heading': Header
+        'heading': Header,
+        'quiz': Quiz
     },
 
     mounted() {
@@ -54,6 +63,9 @@ export default {
         getMoons() {
             this.moons = this.allData.filter(planet => !planet.isPlanet);
             return this.moons;
+        },
+        handleClick() {
+            this.quizState = "show";
         }
     }
 }
@@ -70,5 +82,13 @@ export default {
 
     p, h1, h2, h3 {
         transform: scale(1, 1.1);
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+    
     }
 </style>
