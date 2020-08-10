@@ -20,13 +20,7 @@ export default {
 
     components: {
         "planet-item": PlanetItem
-    },
-
-    data() {
-        return {
-            planets: []
-        }
-    },
+    }
 
 }
 </script>
