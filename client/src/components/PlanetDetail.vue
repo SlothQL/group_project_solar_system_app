@@ -14,6 +14,7 @@
             </select>
         </div>
         <p>It takes {{ planet.sideralOrbit }} days to fully orbit the sun - wow! </p>
+        <h4>Top Facts:</h4>
         <div v-if="planet.englishName === 'Jupiter'">
             <ul>
                 <li>It is the biggest planet in the solar system! It is so big that more than 1300 Earths could fit inside it.</li>
@@ -100,6 +101,30 @@
             </ul>
         </div>
         <div v-if="planet.englishName === 'Earth'">
+            <ul>
+                <li>Where you currently live! {{ planet.englishName }} has more exposed water than land.</li>
+                <li>Three quarters of the Earth is covered by water and has one moon.</li>
+            </ul>
+        </div>
+        <div v-if="planet.englishName === '136199 Eris'">
+            <ul>
+                <li>Eris is one of the largest known dwarf planets in our solar system.</li>
+                <li>It's about the same size as Pluto, but is three times farther from the Sun!</li>
+            </ul>
+        </div>
+        <div v-if="planet.englishName === '1 Ceres'">
+            <ul>
+                <li>In 2006, Ceres was reclassified as a dwarf planet — the closest one to Earth!</li>
+                <li>Scientists would like to search for possible signs of life on Ceres. It has something many other planets don't: water.</li>
+            </ul>
+        </div>
+        <div v-if="planet.englishName === '136108 Haumea'">
+            <ul>
+                <li>Where you currently live! {{ planet.englishName }} has more exposed water than land.</li>
+                <li>A day on Haumea lasts only four Earth hours, making it one of the fastest rotating large objects in our solar system.</li>
+            </ul>
+        </div>
+        <div v-if="planet.englishName === '136472 Makemake'">
             <ul>
                 <li>Where you currently live! {{ planet.englishName }} has more exposed water than land.</li>
                 <li>Three quarters of the Earth is covered by water and has one moon.</li>
