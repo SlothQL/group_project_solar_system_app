@@ -4,8 +4,8 @@
         <div class="list-all-planets">
             <planet-list :planets='planets'></planet-list>
         </div>
-        <div v-if="selectedPlanet">
-            <planet-detail :planet='selectedPlanet' :moons='moons'></planet-detail> 
+        <div v-if="selectedPlanet" :class="detailState">
+            <planet-detail :planet='selectedPlanet' :moons='moons' :detailState='detailState'></planet-detail> 
         </div>
         <div class="quiz-button">  
             <button @click="handleClick">Test your knowledge</button>
@@ -31,7 +31,8 @@ export default {
             moons: [],
             selectedPlanet: null,
             allData: [],
-            quizState: "hide"
+            quizState: "hide",
+            detailState: "show"
         }
     },
     components: {
