@@ -19,18 +19,24 @@
                 <li>It is the biggest planet in the solar system! It is so big that more than 1300 Earths could fit inside it.</li>
                 <li>As well as having many moons, Jupiter also has a number of rings similar to that of Saturn but much less noticeable.</li>
             </ul>
-            <audio controls>
-                <source src="@/assets/planet_sounds/jupiter_sound.wav" type="audio/wav" id="track"/>
-            </audio>
+            <div class="sound">
+                <p>Press Play To Hear The Sounds of Jupiter.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/jupiter_sound.wav" type="audio/wav" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === 'Mars'">
             <ul>
                 <li>Also known as the "Red Planet", {{ planet.englishName}} is the second smallest planet.</li>
                 <li>It has a dusty, rocky surface and a thin atmosphere, and is the most likely destination for future planet exploration by humans!</li>
             </ul>
-            <audio controls>
-                <source src="@/assets/planet_sounds/mars_sound.wav" type="audio/wav" id="track"/>
-            </audio>
+             <div class="sound">
+                <p>Press Play To Hear The Sounds of Mars.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/mars_sound.wav" type="audio/wav" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === 'Uranus'">
             <ul>
@@ -55,9 +61,12 @@
                 <li>{{ planet.englishName}} is the second biggest planet in the solar system.</li>
                 <li>It is known as a gas giant, and has many extreme atmospeheric conditions - storm winds race around the atmosphere! </li>
             </ul>
-            <audio controls>
-                <source src="@/assets/planet_sounds/saturn_sound.mp3" type="audio/mp3" id="track"/>
-            </audio>
+             <div class="sound">
+                <p>Press Play To Hear The Sounds of Saturn.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/saturn_sound.mp3" type="audio/mp3" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === 'Mercury'">
             <ul>
@@ -102,6 +111,12 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
+
+.sound {
+    border: 2px solid gray;
+    border-radius: 2%;
+    width: 50%;
+}
 
 </style>
