@@ -13,9 +13,7 @@ import PlanetItem from "./PlanetItem.vue";
 
 export default {
     name: "PlanetList",
-
     props: ["planets"],
-    
 
     components: {
         "planet-item": PlanetItem
@@ -40,6 +38,7 @@ ul {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 </style>
