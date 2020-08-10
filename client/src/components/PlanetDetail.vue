@@ -53,6 +53,7 @@
         </div>
         <div v-if="planet.englishName === 'Pluto'">
             <ul>
+                <li>Pluto is one of the dwarf planets.</li>
                 <li>It is the smallest and furtherst planet from the sun - and is now known as a Dwarf Planet.</li>
                 <li>Because it is so far away from the sun it is very cold with temperatures ranging from -235 Degrees Celsius to -210 Degrees Celsius - now that's cold!</li>
             </ul>
@@ -68,6 +69,12 @@
                 <li>{{ planet.englishName}} is a large planet, nearly four times the size of Earth.</li>
                 <li>It is the furterst away planet from the sun, and suffers the most violent weather in our Solar System.</li>
             </ul>
+            <div class="sound">
+                <p>Press Play To Hear The Sounds of Neptune.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/pluto_sound.mp3" type="audio/mp3" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === 'Saturn'">
             <ul>
@@ -99,12 +106,24 @@
                 <li>{{ planet.englishName}} is only slightly smaller than Earth - but it is very different in regards to atmosphere and surface conditions!</li>
                 <li>It's surface is often described as a "stormy desert" full of many craters and very active volcanoes.</li>
             </ul>
+            <div class="sound">
+                <p>Press Play To Hear The Sounds of Venus.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/venus_sound.mp3" type="audio/mp3" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === 'Earth'">
             <ul>
                 <li>Where you currently live! {{ planet.englishName }} has more exposed water than land.</li>
                 <li>Three quarters of the Earth is covered by water and has one moon.</li>
             </ul>
+            <div class="sound">
+                <p>Press Play To Hear The Sounds of Earth.</p>
+                <audio controls>
+                    <source src="@/assets/planet_sounds/earth_sound.mp3" type="audio/mp3" id="track"/>
+                </audio>
+            </div>
         </div>
         <div v-if="planet.englishName === '136199 Eris'">
             <ul>
@@ -120,14 +139,15 @@
         </div>
         <div v-if="planet.englishName === '136108 Haumea'">
             <ul>
-                <li>Where you currently live! {{ planet.englishName }} has more exposed water than land.</li>
+                <li>Haumea is another dwarf palnet - and the least spherical of them all!</li>
+                <li>You can recognize Haumea because of its elongated shape.</li>
                 <li>A day on Haumea lasts only four Earth hours, making it one of the fastest rotating large objects in our solar system.</li>
             </ul>
         </div>
         <div v-if="planet.englishName === '136472 Makemake'">
             <ul>
-                <li>Where you currently live! {{ planet.englishName }} has more exposed water than land.</li>
-                <li>Three quarters of the Earth is covered by water and has one moon.</li>
+                <li>Makemake is the second furthest dwarf planet from the Sun and is the third largest dwarf planet in the solar system.</li>
+                <li>It has an average surface temperature -239°C.This is because of its huge distance from the Sun.</li>
             </ul>
         </div>
     </div>
