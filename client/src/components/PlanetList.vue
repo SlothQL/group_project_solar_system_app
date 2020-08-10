@@ -28,9 +28,5 @@ export default {
         }
     },
 
-    // mounted() {
-    //     PlanetService.getPlanets()
-    //     .then(data => this.planet = data);
-    // }
 }
 </script>
