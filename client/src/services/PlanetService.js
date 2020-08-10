@@ -1,9 +1,7 @@
-const baseURL = 'http://localhost:3000/api/'
-
 export default {
 
-getInformation (collection) {
- return fetch(baseURL + collection)
+getInformation (url) {
+ return fetch(url)
  .then(res => res.json())
 },
 
