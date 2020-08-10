@@ -1,9 +1,11 @@
 <template>
   <div>
       <h1>Test your Knowledge</h1>
-        <ol>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" v-model="name" placeholder="Enter Name Here..."/>
             <quiz-item v-for="(question, index) in randomQuestions" :question="question" :key="index"/>
-        </ol>
+        </form>
   </div>
 </template>
 
@@ -14,7 +16,8 @@ export default {
     data() {
         return {
             questions: [],
-            randomQuestions: []
+            randomQuestions: [],
+            name: ""
         };
     },
     name: "quiz", 

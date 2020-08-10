@@ -1,6 +1,10 @@
 <template>
   <div>
-      <p>{{question.question}}</p>
+    <h4 for="question"> {{ question.question}}</h4>
+      <div v-for="(option, index) in question.options" :key="index">
+        <p>{{option}}</p>  
+        <input type="radio" :id="index" :name="question._id" :value="option"/>
+      </div>
   </div>
 </template>
 
