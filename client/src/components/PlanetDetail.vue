@@ -47,9 +47,13 @@
         <div v-if="planet.englishName === 'Saturn'">
             <ul>
                 <li>{{ planet.englishName}} is the second biggest planet in the solar system.</li>
-                <li>It is konwn as a gas giant, and has many extreme atmospeheric conditions - storm winds racr around the atmosphere! </li>
+                <li>It is known as a gas giant, and has many extreme atmospeheric conditions - storm winds race around the atmosphere! </li>
             </ul>
-            <button class="sound" @click.prevent="playSound('./assets/saturn_sound.mp3')">Play Planet Sound</button>
+            <audio controls>
+                <source src="@/assets/saturn_sound.mp3" type="audio/mp3" id="track"/>
+            </audio>
+            <!-- <button class="sound" @click.prevent="playSound('@/assets/saturn_sound.mp3')">Play Planet sound
+            </button> -->
         </div>
         <div v-if="planet.englishName === 'Mercury'">
             <ul>
@@ -74,17 +78,20 @@
 </template>
 
 <script>
+require('howler');
 
 export default {
     name: "planet-detail",
     props: ["planet"],
 
     methods: {
-        playSound(sound) {
-            if(sound) {
-                let audio = new Audio(sound);
-                audio.play();
-            }
+        playSound(file_path) {
+            var sound = new Howl({
+                src: file_path,
+                volume: 0.5,
+            });
+            sound.play();
+            this.playSound(file_path);
         }
     }
 }
