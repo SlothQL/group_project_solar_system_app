@@ -5,9 +5,10 @@ const cors = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
 
+const app = express();
 app.use(parser.json());
 app.use(cors());
-const app = express();
+
 
 MongoClient.connect('mongodb://localhost:27017')
     .then((client) => {
@@ -15,13 +16,13 @@ MongoClient.connect('mongodb://localhost:27017')
         const collectionQuestions = db.collection('questions');
         const collectionLeaderboard = db.collection('leaderboard');
 
-        const questionsRouter = createRouter(questions);
+        const questionsRouter = createRouter(collectionQuestions);
         app.use('/api/questions', questionsRouter);
 
-        const leaderboardRouter = createRouter(leaderboard);
+        const leaderboardRouter = createRouter(collectionLeaderboard);
         app.use('/api/leaderboard', leaderboardRouter);
     })
-    .catch(console.err);
+    .catch(err => console.log(error));
 
     app.listen(3000, function() {
         console.log(`Listening on port ${this.address().port}`);
