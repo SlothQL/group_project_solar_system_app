@@ -50,7 +50,6 @@ export default {
 .center {
   margin: auto;
   width: 50%;
-  border: 3px solid black;
   padding: 10px;
   text-align: center;
 }
