@@ -98,6 +98,15 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
+.planet-details-wrapper {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    background-color: black;
+    color: #ffffff;
+}
+.li {
+    list-style-type: none;
+}
 
 </style>
