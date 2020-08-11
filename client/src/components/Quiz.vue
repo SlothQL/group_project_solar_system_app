@@ -28,12 +28,16 @@
 <script>
 import PlanetService from "../services/PlanetService.js";
 import QuizItem from "./QuizItem.vue";
+import {eventBus} from "../main.js";
+
 export default {
     data() {
         return {
             questions: [],
             randomQuestions: [],
-            name: ""
+            name: "",
+            total: 0,
+            selectedAnswers: []
         };
     },
     name: "quiz", 
@@ -45,9 +49,12 @@ export default {
                 this.getRandomQuestions()
                 });
 
-        eventBus.$on()
-        
+        eventBus.$on('selected-answer', (answer) => {
+            this.selectedAnswers.push(answer)
+        })
+
     },
+    
     methods: {
         getRandomQuestions() {
             while(this.randomQuestions.length < 10) {
@@ -57,8 +64,22 @@ export default {
                 };
             }
         },
+         calculateScore(array) {
+           const correct = this.randomQuestions.map(x => x.correctAnswer);
+           console.log(correct);
+           for (let i =0; i < correct.length; i++) {
+               for (let j = 0; j < array.length; j++) {
+                   if (correct[i] === array[j]) {
+                       this.total += 1;
+                   }
+               }
+           }
+           console.log(this.total);
+           return this.total;
+        },
+        
         handleSubmit(event) {
-            console.log(this.event.target);
+            this.calculateScore(this.selectedAnswers);
         }
     },
     components: {
