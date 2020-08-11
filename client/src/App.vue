@@ -1,4 +1,5 @@
 <template>
+
   <div class="wrap-app">
         <heading></heading>
         <div class="list-all-planets">
@@ -7,13 +8,14 @@
         <div v-if="selectedPlanet" :class="detailState">
             <planet-detail :planet='selectedPlanet' :moons='moons' :detailState='detailState'></planet-detail> 
         </div>
-        <div class="quiz-button">  
+        <div class="quiz-button center-button">  
             <button @click="handleClick">Test your knowledge</button>
         </div>
         <div :class="quizState">
             <quiz></quiz>
         </div>
   </div>
+
 </template>
 
 <script>
@@ -101,5 +103,12 @@ export default {
 
     .show {
     
+    }
+
+    .center-button {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        text-align: center;
     }
 </style>
