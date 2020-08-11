@@ -52,7 +52,6 @@ export default {
         eventBus.$on('selected-answer', (answer) => {
             this.selectedAnswers.push(answer)
         })
-
     },
     
     methods: {
@@ -66,7 +65,6 @@ export default {
         },
         calculateScore(array) {
            const correct = this.randomQuestions.map(x => x.correctAnswer);
-           console.log(correct);
            for (let i =0; i < correct.length; i++) {
                for (let j = 0; j < array.length; j++) {
                    if (correct[i] === array[j]) {
@@ -74,7 +72,6 @@ export default {
                    }
                }
            }
-           console.log(this.total);
            return this.total;
         },
         
@@ -89,8 +86,11 @@ export default {
             this.total = 0;
             this.name = "";
             eventBus.$emit("quiz-state", "hide");
+            eventBus.$emit('answers', this.selectedAnswers);
+            eventBus.$emit('questions', this.randomQuestions);
         }
     },
+    
     components: {
         'quiz-item': QuizItem
     }

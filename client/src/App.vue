@@ -16,6 +16,7 @@
         </div>
         <div :class="resultState">
             <leaderboard></leaderboard>
+            <quiz-result></quiz-result>
         </div>
   </div>
 
@@ -28,6 +29,7 @@ import PlanetList from './components/PlanetList.vue';
 import PlanetDetail from './components/PlanetDetail.vue';
 import Quiz from './components/Quiz.vue';
 import Leaderboard from './components/Leaderboard.vue';
+import QuizResult from './components/QuizResult.vue';
 
 export default {
     name: 'app',
@@ -47,7 +49,8 @@ export default {
         'planet-detail': PlanetDetail,
         'heading': Header,
         'quiz': Quiz,
-        'leaderboard': Leaderboard
+        'leaderboard': Leaderboard,
+        'quiz-result': QuizResult
     },
 
     mounted() {
@@ -76,7 +79,6 @@ export default {
             eventBus.$on('quiz-state', (state) => {
                 this.quizState = state;
                 this.resultState = "show";
-                this.detailState = "show";
             })
     },
     methods: {

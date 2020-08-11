@@ -1,6 +1,6 @@
 <template>
   <div id="leaderboard-list">
-      <ul v-for="(score, index) in leaderboard" :key="index">
+      <ul v-for="(score, index) in topTen" :key="index">
           <li>{{index + 1}}. {{score.name}}: {{score.score}}</li>
       </ul>
   </div>
@@ -14,7 +14,8 @@ export default {
     name: 'leaderboard',
     data() {
         return {
-            leaderboard: []
+            leaderboard: [],
+            topTen: []
         };
     },
     mounted() {
@@ -24,9 +25,20 @@ export default {
         });
 
         eventBus.$on('leaderboard-added', (leaderboardData) => {
-            this.leaderboard.push(leaderboardData)
+            this.leaderboard.push(leaderboardData);
+            this.sortLeaderboard();
         })
 
+
+    },
+    methods: {
+        sortLeaderboard() {
+            const sortedArray = this.leaderboard.sort(function(a, b){
+                return b.score-a.score
+            })
+            this.topTen = sortedArray.slice(0, 10);
+            return this.topTen;
+        }
     }
 }
 </script>
