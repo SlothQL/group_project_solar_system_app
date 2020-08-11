@@ -29,7 +29,6 @@
 import PlanetService from "../services/PlanetService.js";
 import QuizItem from "./QuizItem.vue";
 import {eventBus} from "../main.js";
-
 export default {
     data() {
         return {

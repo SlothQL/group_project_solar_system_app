@@ -1,8 +1,8 @@
 <template>
     <div class="planet-details-wrapper">
         <h2>{{ planet.englishName }}</h2>
-        <p>Discovery Date: {{ planet.discoveryDate }}</p>
-        <p>Disocvered By: {{ planet.discoveredBy }}</p>
+        <p v-if="planet.discoveryDate !== ''">Discovery Date: {{ planet.discoveryDate }}</p>
+        <p v-if="planet.discoveredBy !== ''">Discovered By: {{ planet.discoveredBy }}</p>
         <p>Radius: {{ planet.meanRadius }} km</p>
         <p>Distance From Sun: {{ planet.perihelion }} km</p>
         <p>Gravity: {{ planet.gravity }} m/s 2</p>
