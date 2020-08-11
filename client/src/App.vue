@@ -14,6 +14,9 @@
         <div :class="quizState">
             <quiz></quiz>
         </div>
+        <div>
+            <leaderboard></leaderboard>
+        </div>
   </div>
 
 </template>
@@ -24,6 +27,7 @@ import Header from './components/Header.vue';
 import PlanetList from './components/PlanetList.vue';
 import PlanetDetail from './components/PlanetDetail.vue';
 import Quiz from './components/Quiz.vue';
+import Leaderboard from './components/Leaderboard.vue';
 
 export default {
     name: 'app',
@@ -41,7 +45,8 @@ export default {
         'planet-list': PlanetList,
         'planet-detail': PlanetDetail,
         'heading': Header,
-        'quiz': Quiz
+        'quiz': Quiz,
+        'leaderboard': Leaderboard
     },
 
     mounted() {

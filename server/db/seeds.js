@@ -86,12 +86,12 @@ db.questions.insertMany([
     {
         question: "Which planet in our solar system spins the fastest?",
         options: ["Earth", "Mars", "Jupiter", "Venus"],
-        correctAnswer: "Jupiter. It rotates once on average in just under 10 hours."
+        correctAnswer: "Jupiter"
     },
     {
         question: "What planet in our solar system has the longest day?",
         options: ["Earth", "Mercury", "Saturn", "Venus"],
-        correctAnswer: "Venus (243 Earth days)"
+        correctAnswer: "Venus"
     },
     {
         question: "In our solar system which two planets rotate clockwise?",

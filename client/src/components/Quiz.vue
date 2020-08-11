@@ -64,7 +64,7 @@ export default {
                 };
             }
         },
-         calculateScore(array) {
+        calculateScore(array) {
            const correct = this.randomQuestions.map(x => x.correctAnswer);
            console.log(correct);
            for (let i =0; i < correct.length; i++) {
@@ -80,6 +80,14 @@ export default {
         
         handleSubmit(event) {
             this.calculateScore(this.selectedAnswers);
+            const newLeaderboard = {
+                name: this.name,
+                score: this.total
+            }
+            PlanetService.postInformation(newLeaderboard)
+            .then(res => eventBus.$emit('leaderboard-added', res));
+            //this.total = 0;
+            //this.name = "";
         }
     },
     components: {
