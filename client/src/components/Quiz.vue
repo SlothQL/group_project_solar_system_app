@@ -13,14 +13,14 @@
          style="max-width: 30rem;"
          class="mb-2"
          >
+         <form @submit.prevent="handleSubmit" method="post">
          <b-card-body>
-            <form>
                <label for="name">Name</label>
                <input type="text" id="name" v-model="name" placeholder="Enter Name Here..."/>
                <quiz-item v-for="(question, index) in randomQuestions" :question="question" :key="index"/>
-            </form>
          </b-card-body>
-         <b-button href="#" variant="primary">Submit</b-button>
+         <input type="submit" value="Submit" id="submit"/>
+         </form>
       </b-card>
    </div>
 </template>
@@ -44,6 +44,9 @@ export default {
                 this.questions = questions
                 this.getRandomQuestions()
                 });
+
+        eventBus.$on()
+        
     },
     methods: {
         getRandomQuestions() {
@@ -53,6 +56,9 @@ export default {
                     this.randomQuestions.push(randomQuestion)
                 };
             }
+        },
+        handleSubmit(event) {
+            console.log(this.event.target);
         }
     },
     components: {

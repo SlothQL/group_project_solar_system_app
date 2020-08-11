@@ -13,13 +13,7 @@ import PlanetItem from "./PlanetItem.vue";
 
 export default {
     name: "PlanetList",
-<<<<<<< HEAD
-
-    props: ['planets'],
-    
-=======
     props: ["planets"],
->>>>>>> develop
 
     components: {
         "planet-item": PlanetItem
