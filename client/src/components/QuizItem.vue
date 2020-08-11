@@ -35,7 +35,8 @@ export default {
     },
     methods: {
       selectAnswer() {
-         eventBus.$emit('selected-answer', this.selectedAnswer)
+         eventBus.$emit('selected-answer', this.selectedAnswer);
+         eventBus.$emit('question-id', this.question._id)
       }
    }
 }

@@ -37,7 +37,8 @@ export default {
             randomQuestions: [],
             name: "",
             total: 0,
-            selectedAnswers: []
+            selectedAnswers: [],
+            questionId: []
         };
     },
     name: "quiz", 
@@ -51,6 +52,16 @@ export default {
 
         eventBus.$on('selected-answer', (answer) => {
             this.selectedAnswers.push(answer)
+        })
+
+        eventBus.$on('question-id', (id) => {
+            this.questionId.push(id)
+            let feedback = this.questionId.some(x => this.questionId.indexOf(x) !== this.questionId.lastIndexOf(x))
+            if (feedback) {
+                const lastId = this.questionId.pop();
+                const index = this.questionId.findIndex(id => id === lastId);
+                this.selectedAnswers[index] = this.selectedAnswers.pop()
+            }
         })
     },
     
