@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <div class="img-list">
     <img v-on:click="handleClick" class="img" 
     :src="require(`../assets/planets_images/${planet.englishName.replace(/\s/g, '-')}.jpg`)" alt="Image of planet"/>
-    <li class="planet-name">{{planet.englishName}}</li>
-    
+    <p class="planet-name">{{planet.englishName}}</p>
   </div>
 
 
@@ -26,8 +25,21 @@ export default {
 </script>
 
 <style scoped>
-   img {
-        height: 100px;
-        width: 120px;
+.img {
+    height: 160px;
+    width: 200px;
+    text-align: center;
     }
-</style>m
+
+.planet-name {
+    color: white;
+    text-align: center;
+    list-style: none;
+    text-align: center;
+}
+
+.img-list:hover {
+    cursor: pointer;
+}
+
+</style>
