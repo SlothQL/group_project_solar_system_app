@@ -181,7 +181,7 @@ export default {
     background-color: black;
     color: #ffffff;
 }
-.li {
+.ul {
     list-style-type: none;
 }
 

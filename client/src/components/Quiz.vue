@@ -86,8 +86,9 @@ export default {
             }
             PlanetService.postInformation(newLeaderboard)
             .then(res => eventBus.$emit('leaderboard-added', res));
-            //this.total = 0;
-            //this.name = "";
+            this.total = 0;
+            this.name = "";
+            eventBus.$emit("quiz-state", "hide");
         }
     },
     components: {

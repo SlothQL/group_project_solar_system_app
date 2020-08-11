@@ -1,6 +1,8 @@
 <template>
-  <div>
-
+  <div id="leaderboard-list">
+      <ul v-for="(score, index) in leaderboard" :key="index">
+          <li>{{index + 1}}. {{score.name}}: {{score.score}}</li>
+      </ul>
   </div>
 </template>
 
@@ -30,5 +32,7 @@ export default {
 </script>
 
 <style scoped>
-
+ul {
+    list-style-type: none;
+}
 </style>

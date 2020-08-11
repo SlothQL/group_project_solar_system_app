@@ -14,7 +14,7 @@
         <div :class="quizState">
             <quiz></quiz>
         </div>
-        <div>
+        <div :class="resultState">
             <leaderboard></leaderboard>
         </div>
   </div>
@@ -38,7 +38,8 @@ export default {
             selectedPlanet: null,
             allData: [],
             quizState: "hide",
-            detailState: "show"
+            detailState: "show",
+            resultState: "hide"
         }
     },
     components: {
@@ -70,6 +71,12 @@ export default {
                     this.quizState = "hide";
                     }
                 }
+            })
+
+            eventBus.$on('quiz-state', (state) => {
+                this.quizState = state;
+                this.resultState = "show";
+                this.detailState = "show";
             })
     },
     methods: {
