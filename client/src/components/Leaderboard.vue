@@ -56,7 +56,6 @@ ul {
 
 #leaderboard-list {
     color:#ffffff;
-    margin-left: 80px;
     background-color: rgba(255, 255, 255, .25);
     font-size: 20px;
 } 
@@ -74,6 +73,7 @@ ul {
 
 .topten-list {
     font-size: 18px;
+    margin-left: -12px;
 }
 
 </style>

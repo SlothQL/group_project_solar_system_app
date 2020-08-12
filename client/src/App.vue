@@ -147,7 +147,7 @@ export default {
     }
 
     .btn-quiz.main {
-        margin: 40px 0px;
+        margin: 30px 0px 60px 0px;
     }
     .btn-quiz {
         margin: 0px 40px;
@@ -171,6 +171,7 @@ export default {
 
     .results {
         display: flex;
+        justify-content: center;
     }
     
 </style>

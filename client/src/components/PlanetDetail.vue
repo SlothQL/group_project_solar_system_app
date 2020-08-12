@@ -8,7 +8,8 @@
         <p>Distance From Sun: {{ planet.perihelion }} km</p>
         <p>Gravity: {{ planet.gravity }} m/s 2</p>
         <div v-if="planet.moons !== null">
-        <p>It has {{ planet.moons.length }} moons. </p>
+        <p v-if="planet.moons.length > 1">It has {{ planet.moons.length }} moons. </p>
+        <p v-if="planet.moons.length === 1">It has {{ planet.moons.length }} moon. </p>
             <label for="moonList">All Moons</label>
             <select id="moonList">
                 <option v-for="(moon, index) in planet.moons" :key="index" :moon="moon"> {{ moon.moon}} </option>
@@ -193,5 +194,9 @@ export default {
 
 label {
     margin-right: 15px;
+}
+
+.planet-details-wrapper p {
+    font-size: 18px;
 }
 </style>

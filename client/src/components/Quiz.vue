@@ -11,7 +11,7 @@
          <form @submit.prevent="handleSubmit" method="post">
          <b-card-body>
                <label class="name-quiz" for="name">Name</label>
-               <input type="text" class="name-field" id="name" v-model="name" placeholder="Enter Name Here..."/>
+               <input type="text" class="name-field" id="name" v-model="name" placeholder="Enter Name Here..." required/>
                <quiz-item v-for="(question, index) in randomQuestions" :question="question" :key="index"/>
          </b-card-body>
          <input class="btn-quiz" type="submit" value="Check your answers!" id="submit"/>
@@ -31,9 +31,7 @@ export default {
             questions: [],
             randomQuestions: [],
             name: "",
-            total: 0,
-            selectedAnswers: [],
-            questionId: []
+            total: 0
         };
     },
     name: "quiz", 
@@ -43,21 +41,7 @@ export default {
             .then(questions => {
                 this.questions = questions
                 this.getRandomQuestions()
-                });
-
-        eventBus.$on('selected-answer', (answer) => {
-            this.selectedAnswers.push(answer)
-        })
-
-        eventBus.$on('question-id', (id) => {
-            this.questionId.push(id)
-            let feedback = this.questionId.some(x => this.questionId.indexOf(x) !== this.questionId.lastIndexOf(x))
-            if (feedback) {
-                const lastId = this.questionId.pop();
-                const index = this.questionId.findIndex(id => id === lastId);
-                this.selectedAnswers[index] = this.selectedAnswers.pop()
-            }
-        })
+            });
     },
     
     methods: {
@@ -69,18 +53,17 @@ export default {
                 };
             }
         },
-        calculateScore(array) {
-            const correct = this.randomQuestions.map(x => x.correctAnswer);
-            for (let i = 0; i < correct.length; i++) {
-                if (correct[i] === array[i]) {
-                   this.total += 1;
+        calculateScore() {
+            for (let i = 0; i < this.randomQuestions.length; i++) {
+                if (this.randomQuestions[i].correctAnswer === this.randomQuestions[i].selectedAnswer) {
+                    this.total +=1
                 }
             }
             return this.total;
         },
         
         handleSubmit(event) {
-            this.calculateScore(this.selectedAnswers);
+            this.calculateScore();
             const newLeaderboard = {
                 name: this.name,
                 score: this.total
@@ -89,8 +72,8 @@ export default {
             .then(res => eventBus.$emit('leaderboard-added', res));
             this.total = 0;
             this.name = "";
+            this.randomQuestions.selectedAnswer = "";
             eventBus.$emit("quiz-state", "hide");
-            eventBus.$emit('answers', this.selectedAnswers);
             eventBus.$emit('questions', this.randomQuestions);
         }
     },
