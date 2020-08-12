@@ -33,30 +33,30 @@
             >
        
             <b-carousel-slide
-               caption="SOLARFACT #1"
+               caption="SOLAR FACT #1"
                text="194 moons, 3,583 comets and 796,289 asteroids have been found in the solar system."
                img-src="../assets/carousel_images/solar-systemandroid-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-vjudo-2000x1451 (2).jpg"
                ></b-carousel-slide>
             <!-- Slides with custom text -->
             <b-carousel-slide 
-               caption="SOLARFACT #2"
-               text="99.86% of the solar system’s mass is found in the Sun. The majority of the remaining 0.14% is contained within the eight planets."
+               caption="SOLAR FACT #2"
+               text="99.86% of the solar system’s mass is found in the Sun."
                img-src="../assets/carousel_images/cropped-1024-480-957439.jpg">
             </b-carousel-slide>
         
             <b-carousel-slide 
-                caption="SOLARFACT #3"
+                caption="SOLAR FACT #3"
                 text="The Solar System formed around 4.6 billion years ago."
                 img-src="../assets/carousel_images/nasa-yZygONrUBe8-unsplash.jpg"></b-carousel-slide>
            
             <b-carousel-slide 
-                caption="SOLARFACT #4"
-                text="As of 2008, there are also five dwarf planets: Pluto, Ceres, Eris, Makemake & Haumea."
+                caption="SOLAR FACT #4"
+                text="As of 2008, there are also five dwarf planets: Pluto, Ceres, Eris, Makemake and Haumea."
                 img-src="../assets/carousel_images/solar-system-model.jpg"></b-carousel-slide>
           
             <b-carousel-slide 
-                caption="SOLARFACT #5" 
-                text="The two innermost gas giants, Jupiter and Saturn, are the largest of the four outer planets and are composed mainly of hydrogen and helium."
+                caption="SOLAR FACT #5" 
+                text="The two innermost gas giants, Jupiter and Saturn, are the largest of the four outer planets."
                 img-src="../assets/carousel_images/carousel_one.jpg" 
                 img-alt="">
             </b-carousel-slide>
