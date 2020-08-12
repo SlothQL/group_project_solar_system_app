@@ -178,6 +178,7 @@ export default {
 .planet-details-wrapper {
     text-align: center;
     color: #ffffff;
+    margin-top: 80px;
 }
 .ul {
     list-style-type: none;
@@ -189,4 +190,7 @@ export default {
     margin: auto;
 }
 
+label {
+    margin-right: 15px;
+}
 </style>
