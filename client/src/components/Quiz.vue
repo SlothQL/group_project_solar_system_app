@@ -75,15 +75,14 @@ export default {
             }
         },
         calculateScore(array) {
-           const correct = this.randomQuestions.map(x => x.correctAnswer);
-           for (let i =0; i < correct.length; i++) {
-               for (let j = 0; j < array.length; j++) {
-                   if (correct[i] === array[j]) {
-                       this.total += 1;
-                   }
-               }
-           }
-           return this.total;
+            const correct = this.randomQuestions.map(x => x.correctAnswer);
+            for (let i = 0; i < correct.length; i++) {
+                if (correct[i] === array[i]) {
+                   this.total += 1;
+                }
+            }
+            console.log(this.total);
+            return this.total;
         },
         
         handleSubmit(event) {

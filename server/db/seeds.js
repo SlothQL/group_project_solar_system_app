@@ -36,7 +36,7 @@ db.questions.insertMany([
     {
         question: "Ceres is a dwarf planet that lies between the orbits of which two planets in our solar system?",
         options: ["Mars and Jupiter", "Mars and Earth", "Jupiter and Saturn", " Saturn and Uranus"],
-        correctAnswer: "Mars & Jupiter"
+        correctAnswer: "Mars and Jupiter"
     },
     {
         question: "Which planet in our solar system has the most oxygen?",
