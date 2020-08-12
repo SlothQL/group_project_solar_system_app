@@ -1,8 +1,9 @@
 <template>
-    <div v-if="userAnswers.length === 10">
+    <div class="result-list" v-if="userAnswers.length === 10">
+        <h4 class="results-headline">Your Results</h4>
         <ul v-for="(answer, index) in userAnswers" :key="index">
-            <li v-if="answer === quizQuestions[index].correctAnswer" class="correct">Question{{index + 1}}: Well done! {{answer}} is the correct Answer.</li>
-            <li v-if="answer !== quizQuestions[index].correctAnswer" class="wrong">Question{{index + 1}}: Maybe next time... {{quizQuestions[index].correctAnswer}} is the correct Answer</li>
+            <li v-if="answer === quizQuestions[index].correctAnswer" class="correct result-answer">Question {{index + 1}}: Well done! {{answer}} is the correct Answer.</li>
+            <li v-if="answer !== quizQuestions[index].correctAnswer" class="wrong result-answer">Question {{index + 1}}: Maybe next time... {{quizQuestions[index].correctAnswer}} is the correct  Answer</li>
         </ul>
     </div>
 </template>
@@ -36,9 +37,26 @@ ul {
 }
 
 .correct {
-    color:green;
+    color: #31AFD4;
 }
 .wrong {
-    color: red;
+    color: #ffffff;
 }
+.result-list {
+    color:#ffffff;
+    margin-left: 80px;
+    background-color: rgba(255, 255, 255, .25);
+    padding: 15px 20px;
+    text-align:center;
+}
+.results-headline {
+    color: white;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.result-answer {
+    font-size: 20px;
+}
+
 </style>

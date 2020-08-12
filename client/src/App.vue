@@ -17,9 +17,9 @@
             <div :class="quizState">
                 <quiz :key="componentKey"></quiz>
             </div>
-            <div :class="resultState">
-                <leaderboard></leaderboard>
-                <quiz-result></quiz-result>
+            <div :class="resultState" class="results">
+                <leaderboard :class="resultState" class="result-item"></leaderboard>
+                <quiz-result class="result-item"></quiz-result>
             </div>
         </div>
         
@@ -125,10 +125,6 @@ export default {
         margin-top: 10px;
     }
 
-    p, h1, h2, h3 {
-        transform: scale(1, 1.1);
-    }
-
     .hide {
         display: none;
     }
@@ -172,4 +168,9 @@ export default {
         outline: none !important;
         box-shadow: none !important;
     } 
+
+    .results {
+        display: flex;
+    }
+    
 </style>

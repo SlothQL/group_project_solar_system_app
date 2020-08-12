@@ -1,8 +1,13 @@
 <template>
-  <div id="leaderboard-list">
-      <ul v-for="(score, index) in topTen" :key="index">
-          <li>{{index + 1}}. {{score.name}}: {{score.score}}</li>
-      </ul>
+  <div>
+      <div id="leaderboard-list">
+          <div class="list-topten">
+            <h4 class="leaderboard-headline">Leaderboard - Top Ten</h4>
+            <ul v-for="(score, index) in topTen" :key="index">
+                <li class="topten-list">{{index + 1}}. {{score.name}}: {{score.score}}</li>
+            </ul>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -44,7 +49,31 @@ export default {
 </script>
 
 <style scoped>
+
 ul {
     list-style-type: none;
 }
+
+#leaderboard-list {
+    color:#ffffff;
+    margin-left: 80px;
+    background-color: rgba(255, 255, 255, .25);
+    font-size: 20px;
+} 
+
+.list-topten {
+    padding: 15px 20px 15px 0px;
+    text-align: center;
+}
+
+.leaderboard-headline {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.topten-list {
+    font-size: 20px;
+}
+
 </style>
