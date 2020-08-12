@@ -12,7 +12,7 @@
                 <planet-detail :planet='selectedPlanet' :moons='moons' :detailState='detailState'></planet-detail> 
             </div>
             <div class="quiz-button center-button">  
-                <button @click="handleClick">Test your knowledge</button>
+                <input type="button" class="btn-quiz" @click="handleClick" value="Test your knowledge" />
             </div>
             <div :class="quizState">
                 <quiz :key="componentKey"></quiz>
@@ -148,5 +148,25 @@ export default {
         background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:0;
     }
-    
+
+    .btn-quiz {
+        margin: 40px;
+        padding: 7px 10px;
+        border: none;
+        border-radius: 7%;
+        background-color: rgb(95, 95, 202);
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .btn-quiz:hover {
+        background-color: rgb(123, 123, 204);    
+    }
+
+input[type="button"] {
+    outline: none !important;
+    box-shadow: none !important;
+} 
+
 </style>

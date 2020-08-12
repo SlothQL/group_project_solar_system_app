@@ -178,7 +178,7 @@ export default {
 .planet-details-wrapper {
     text-align: center;
     color: #ffffff;
-    margin-top: 80px;
+    margin-top: 60px;
 }
 .ul {
     list-style-type: none;
