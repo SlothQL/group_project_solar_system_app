@@ -1,7 +1,9 @@
 <template>
 
   <div class="wrap-app">
+        <div class="heading-wrap">
         <heading></heading>
+        </div>
         <div class="list-all-planets">
             <planet-list :planets='planets'></planet-list>
         </div>
@@ -117,6 +119,7 @@ export default {
 
     body {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 10px;
     }
 
     p, h1, h2, h3 {
