@@ -19,7 +19,7 @@
             </div>
             <div :class="resultState" class="results">
                 <leaderboard :class="resultState" class="result-item"></leaderboard>
-                <quiz-result class="result-item"></quiz-result>
+                <quiz-result :class="resultState" class="result-item"></quiz-result>
             </div>
         </div>
         

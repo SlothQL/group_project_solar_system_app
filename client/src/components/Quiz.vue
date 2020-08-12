@@ -1,10 +1,5 @@
 <template>
    <div class="center">
-      <!-- <form>
-         <label for="name">Name</label>
-         <input type="text" id="name" v-model="name" placeholder="Enter Name Here..."/>
-         <quiz-item v-for="(question, index) in randomQuestions" :question="question" :key="index"/>
-         </form> -->
       <b-card
          img-src="../assets/bigbrain.jpg"
          img-alt="big-brain"
