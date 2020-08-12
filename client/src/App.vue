@@ -164,9 +164,8 @@ export default {
         background-color: rgb(123, 123, 204);    
     }
 
-input[type="button"] {
-    outline: none !important;
-    box-shadow: none !important;
-} 
-
+    input[type="button"] {
+        outline: none !important;
+        box-shadow: none !important;
+    } 
 </style>

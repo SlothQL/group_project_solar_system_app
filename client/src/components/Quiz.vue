@@ -6,17 +6,17 @@
          <quiz-item v-for="(question, index) in randomQuestions" :question="question" :key="index"/>
          </form> -->
       <b-card
-         title="Test your Knowledge"
          img-src="../assets/bigbrain.jpg"
          img-alt="big-brain"
          img-top
-         style="max-width: 30rem;"
+         style="max-width: 30rem; border: none; background-color: rgba(255, 255, 255, .25);"
          class="mb-2"
          >
+         <h2 class="card-title">Test your Knowledge</h2>
          <form @submit.prevent="handleSubmit" method="post">
          <b-card-body>
-               <label for="name">Name</label>
-               <input type="text" id="name" v-model="name" placeholder="Enter Name Here..."/>
+               <label class="name-quiz" for="name">Name</label>
+               <input type="text" class="name-field" id="name" v-model="name" placeholder="Enter Name Here..."/>
                <quiz-item v-for="(question, index) in randomQuestions" :question="question" :key="index"/>
          </b-card-body>
          <input type="submit" value="Check your answers!" id="submit"/>
@@ -118,4 +118,19 @@ export default {
   margin: auto;
   text-align: center;
 }
+
+h2 {
+    color: white;
+}
+
+.name-quiz {
+    color: white;
+    margin-right: 15px;
+    margin-bottom: 25px;
+}
+
+.name-field {
+    margin-bottom: 25px; 
+}
+
 </style>
