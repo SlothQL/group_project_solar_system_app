@@ -75,6 +75,10 @@ export default {
                     this.quizState = "hide";
                     }
                 }
+                if (this.resultState === "show") {
+                    this.resultState = "hide";
+                    this.detailState = "show";
+                }
             })
 
             eventBus.$on('quiz-state', (state) => {
