@@ -1,6 +1,7 @@
 <template>
     <div class="planet-details-wrapper">
         <h2>{{ planet.englishName }}</h2>
+        <p v-if="planet.englishName === 'Pluto' || planet.englishName === '1 Ceres' || planet.englishName === '136199 Eris' || planet.englishName === '136108 Haumea' || planet.englishName === '136472 Makemake'">{{planet.englishName}} is one of the five Dwarf Planets in our Solar System.</p>
         <p v-if="planet.discoveryDate !== ''">Discovery Date: {{ planet.discoveryDate }}</p>
         <p v-if="planet.discoveredBy !== ''">Discovered By: {{ planet.discoveredBy }}</p>
         <p>Radius: {{ planet.meanRadius }} km</p>
