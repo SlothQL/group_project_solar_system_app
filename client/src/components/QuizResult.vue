@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="userAnswers.length === 10">
         <ul v-for="(answer, index) in userAnswers" :key="index">
             <li v-if="answer === quizQuestions[index].correctAnswer" class="correct">Question{{index + 1}}: Well done! {{answer}} is the correct Answer.</li>
             <li v-if="answer !== quizQuestions[index].correctAnswer" class="wrong">Question{{index + 1}}: Maybe next time... {{quizQuestions[index].correctAnswer}} is the correct Answer</li>

@@ -97,7 +97,10 @@ export default {
         handleClick() {
             this.quizState = "show";
             this.detailState = "hide";
-            this.forceRerender()
+            this.forceRerender();
+            if (this.resultState === "show") {
+                this.resultState = "hide";
+            }
         }
     }
 }
