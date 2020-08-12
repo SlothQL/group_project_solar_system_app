@@ -81,7 +81,6 @@ export default {
                    this.total += 1;
                 }
             }
-            console.log(this.total);
             return this.total;
         },
         

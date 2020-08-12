@@ -12,7 +12,7 @@
             <button @click="handleClick">Test your knowledge</button>
         </div>
         <div :class="quizState">
-            <quiz></quiz>
+            <quiz :key="componentKey"></quiz>
         </div>
         <div :class="resultState">
             <leaderboard></leaderboard>
@@ -41,7 +41,8 @@ export default {
             allData: [],
             quizState: "hide",
             detailState: "show",
-            resultState: "hide"
+            resultState: "hide",
+            componentKey: 0
         }
     },
     components: {
@@ -90,9 +91,13 @@ export default {
             this.moons = this.allData.filter(planet => !planet.isPlanet);
             return this.moons;
         },
+        forceRerender() {
+            this.componentKey += 1;
+        },
         handleClick() {
             this.quizState = "show";
-            this.detailState = "hide"
+            this.detailState = "hide";
+            this.forceRerender()
         }
     }
 }
