@@ -19,7 +19,7 @@
                <input type="text" class="name-field" id="name" v-model="name" placeholder="Enter Name Here..."/>
                <quiz-item v-for="(question, index) in randomQuestions" :question="question" :key="index"/>
          </b-card-body>
-         <input type="submit" value="Check your answers!" id="submit"/>
+         <input class="btn-quiz" type="submit" value="Check your answers!" id="submit"/>
          </form>
       </b-card>
    </div>
