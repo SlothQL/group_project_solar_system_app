@@ -154,7 +154,7 @@ export default {
         padding: 7px 10px;
         border: none;
         border-radius: 7%;
-        background-color: rgb(95, 95, 202);
+        background-color: rgb(102, 95, 202);
         color: white;
         font-size: 20px;
         cursor: pointer;

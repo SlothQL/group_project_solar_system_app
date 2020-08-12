@@ -2,8 +2,8 @@
     <div class="result-list" v-if="userAnswers.length === 10">
         <h4 class="results-headline">Your Results</h4>
         <ul v-for="(answer, index) in userAnswers" :key="index">
-            <li v-if="answer === quizQuestions[index].correctAnswer" class="correct result-answer">Question {{index + 1}}: Well done! {{answer}} is the correct Answer.</li>
-            <li v-if="answer !== quizQuestions[index].correctAnswer" class="wrong result-answer">Question {{index + 1}}: Maybe next time... {{quizQuestions[index].correctAnswer}} is the correct  Answer</li>
+            <li v-if="answer === quizQuestions[index].correctAnswer" class="correct result-answer">Question {{index + 1}}: Well done! {{answer}} is the correct answer.</li>
+            <li v-if="answer !== quizQuestions[index].correctAnswer" class="wrong result-answer">Question {{index + 1}}: Maybe next time... {{quizQuestions[index].correctAnswer}} is the correct answer</li>
         </ul>
     </div>
 </template>
@@ -32,6 +32,7 @@ export default {
 </script>
 
 <style>
+
 ul {
     list-style-type: none;
 }
@@ -56,7 +57,7 @@ ul {
 }
 
 .result-answer {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 </style>
