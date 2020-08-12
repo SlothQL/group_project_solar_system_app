@@ -1,7 +1,7 @@
 <template>
     <div id="planets-list">
-        <h1>Planets in our Solar System</h1>
-        <p>Click on a planet below to find out some fun facts!</p>
+        <h1>Planets and Dwarf Planets in our Solar System</h1>
+        <h5>Click on a planet below to discover some fun facts!</h5>
         <ul>
             <planet-item v-for="(planet, index) in planets" :planet="planet" :key="index"/>
         </ul>
@@ -13,32 +13,36 @@ import PlanetItem from "./PlanetItem.vue";
 
 export default {
     name: "PlanetList",
+    
     props: ["planets"],
 
     components: {
         "planet-item": PlanetItem
     }
-
 }
 </script>
 
 <style scoped>
 
-h1, p {
+h1, h5 {
     color: white;
     text-align: center;
     padding: 10px;
 }
 
 #planets-list {
-    background-color: black;
+    padding-top: 80px;
 }
 
 ul {
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 40px;
 }
-
+.headline {
+    color:white;
+    display:inline-block;
+}
 </style>

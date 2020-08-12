@@ -92,7 +92,7 @@
             <ul>
                 <li>{{ planet.englishName }} is a small planet which orbits closer to the sun than any other planet in our solar system.</li>
                 <li>It has no atmosphere which means there is no wind or weather.</li>
-                <li>it is so close to the sun that the daytime temperature on Mercury is scorching - reaching over 400 Degrees Celsius.</li>
+                <li>It is so close to the sun that the daytime temperature on Mercury is scorching - reaching over 400 Degrees Celsius.</li>
             </ul>
             <div class="sound">
                 <p>Press Play To Hear The Sounds of Mercury.</p>
@@ -177,8 +177,6 @@ export default {
 <style scoped>
 .planet-details-wrapper {
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    background-color: black;
     color: #ffffff;
 }
 .ul {
@@ -186,9 +184,9 @@ export default {
 }
 
 .sound {
-    border: 2px solid gray;
-    border-radius: 2%;
     width: 50%;
+    text-align: center;
+    margin: auto;
 }
 
 </style>

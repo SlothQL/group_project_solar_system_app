@@ -4,22 +4,25 @@
         <div class="heading-wrap">
         <heading></heading>
         </div>
-        <div class="list-all-planets">
-            <planet-list :planets='planets'></planet-list>
+        <div class="stars">
+            <div class="list-all-planets">
+                <planet-list :planets='planets'></planet-list>
+            </div>
+             <div v-if="selectedPlanet" :class="detailState">
+                <planet-detail :planet='selectedPlanet' :moons='moons' :detailState='detailState'></planet-detail> 
+            </div>
+            <div class="quiz-button center-button">  
+                <button @click="handleClick">Test your knowledge</button>
+            </div>
+            <div :class="quizState">
+                <quiz :key="componentKey"></quiz>
+            </div>
+            <div :class="resultState">
+                <leaderboard></leaderboard>
+                <quiz-result></quiz-result>
+            </div>
         </div>
-        <div v-if="selectedPlanet" :class="detailState">
-            <planet-detail :planet='selectedPlanet' :moons='moons' :detailState='detailState'></planet-detail> 
-        </div>
-        <div class="quiz-button center-button">  
-            <button @click="handleClick">Test your knowledge</button>
-        </div>
-        <div :class="quizState">
-            <quiz :key="componentKey"></quiz>
-        </div>
-        <div :class="resultState">
-            <leaderboard></leaderboard>
-            <quiz-result></quiz-result>
-        </div>
+        
   </div>
 
 </template>
@@ -140,4 +143,10 @@ export default {
         padding: 10px;
         text-align: center;
     }
+
+    .stars {
+        background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+    }
+    
 </style>

@@ -28,14 +28,14 @@
             background="#ababab"
             img-width="1024"
             img-height="480"
-            style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-size: 23px;"
+            style="text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-size: 22px;"
             
             >
        
             <b-carousel-slide
                caption="SOLAR FACT #1"
                text="194 moons, 3,583 comets and 796,289 asteroids have been found in the solar system."
-               img-src="../assets/carousel_images/solar-systemandroid-iphone-desktop-hd-backgrounds-wallpapers-1080p-4k-vjudo-2000x1451 (2).jpg"
+               img-src="../assets/carousel_images/The_Planets_Saturn.jpg"
                ></b-carousel-slide>
             <!-- Slides with custom text -->
             <b-carousel-slide 
@@ -52,7 +52,7 @@
             <b-carousel-slide 
                 caption="SOLAR FACT #4"
                 text="As of 2008, there are also five dwarf planets: Pluto, Ceres, Eris, Makemake and Haumea."
-                img-src="../assets/carousel_images/solar-system-model.jpg"></b-carousel-slide>
+                img-src="../assets/carousel_images/moon.jpg"></b-carousel-slide>
           
             <b-carousel-slide 
                 caption="SOLAR FACT #5" 

@@ -1,10 +1,11 @@
 <template>
+<div>
   <div class="img-list">
     <img v-on:click="handleClick" class="img" 
     :src="require(`../assets/planets_images/${planet.englishName.replace(/\s/g, '-')}.jpg`)" alt="Image of planet"/>
     <p class="planet-name">{{planet.englishName}}</p>
   </div>
-
+</div>
 
 </template>
 
