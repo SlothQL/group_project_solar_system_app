@@ -37,7 +37,6 @@
                text="194 moons, 3,583 comets and 796,289 asteroids have been found in the solar system."
                img-src="../assets/carousel_images/The_Planets_Saturn.jpg"
                ></b-carousel-slide>
-            <!-- Slides with custom text -->
             <b-carousel-slide 
                caption="SOLAR FACT #2"
                text="99.86% of the solar system’s mass is found in the Sun."
