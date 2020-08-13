@@ -34,7 +34,7 @@ ul {
 }
 
 .correct {
-    color: #31AFD4;
+    color: #48badd;
 }
 .wrong {
     color: #ffffff;
