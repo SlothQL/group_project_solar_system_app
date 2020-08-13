@@ -199,4 +199,8 @@ label {
 .planet-details-wrapper p {
     font-size: 18px;
 }
+
+.planet-details-wrapper li {
+    font-size: 18px;
+}
 </style>
