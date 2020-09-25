@@ -1,4 +1,4 @@
-# Explore our Solar System
+# Explore our Solar System :ringed_planet:
 
 CodeClan JavaScript Group Project
 
